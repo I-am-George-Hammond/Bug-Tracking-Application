@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
+    <!--  All snippets are MIT license http://bootdey.com/license -->
+    <title>Bugs Page</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/css/bootstrap.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <main class="content">
+      <div class="container p-0">
+        <div class="top">
+          <h1 id="top" class="h3 mb-3">Bugs Poster Board</h1>
+          <h5 class="top-sub">Drag the tickets to the desired state</h5>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-6 col-xl-3">
+            <div class="card card-border-primary">
+              <div class="card-header">
+                <div class="card-actions float-right">
+                  <div class="dropdown show">
+                    <a href="#" data-toggle="dropdown" data-display="static">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-more-horizontal align-middle"
+                      >
+                        <circle cx="12" cy="12" r="1"></circle>
+                        <circle cx="19" cy="12" r="1"></circle>
+                        <circle cx="5" cy="12" r="1"></circle>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <h5 class="card-title">To-Do</h5>
+                <h6 class="card-subtitle text-muted">
+                  This shows the tasks that needs to be done
+                </h6>
+              </div>
+
+              <div class="card-body p-3 card items" id="Start">
+                <!--Starting block for the cards-->
+                <div
+                  class="dropzone"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                  ondragleave="clearDrop(event)"
+                >
+                  &nbsp;
+                </div>
+                <!-- Task 001 -->
+                <div
+                  class="card draggable shadow-sm"
+                  id="task0001"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                >
+                  <div class="card-body p-2">
+                    <div class="card-title">
+                      <span class="lead text-primary">Ticket</span>
+                    </div>
+                    <div class="mb-3 bg-light">
+                      <div
+                        id="condition"
+                        class="card-body p-3 condition-intermediate"
+                      >
+                        <div class="float-right mr-n2"></div>
+                        <h5 id="head">Ndlovu Lodge</h5>
+                        <div class="grid">
+                          <div class="right-bor">
+                            <h6>Date of Issue</h6>
+                            <!-- Get current date -->
+                            <h7 id="date1"
+                              ><script>
+                                let date = new Date();
+                                let current_date =
+                                  date.getFullYear() +
+                                  "-" +
+                                  (date.getMonth() + 1) +
+                                  "-" +
+                                  date.getDate();
+                                document.getElementById("date1").innerHTML =
+                                  current_date;
+                              </script></h7
+                            >
+                          </div>
+                          <div>
+                            <h6>Bug Encounter</h6>
+                            <h7 id="date2">2021-06-04</h7>
+                          </div>
+                        </div>
+
+                        <h6>Description</h6>
+                        <p class="des" id="des">
+                          When placing reservation..confirmation screen keeps on
+                          loading
+                        </p>
+                        <div class="grid">
+                          <h6>Severity :</h6>
+                          <h6 class="num-color-intermediate" id="sev">Intermediate</h6>
+                        </div>
+                        <hr />
+                        <div class="float-right mt-n1">
+                          <img
+                            draggable="false"
+                            src="https://bootdey.com/img/Content/avatar/avatar4.png"
+                            width="32"
+                            height="32"
+                            class="rounded-circle"
+                            alt="Avatar"
+                          />
+                        </div>
+                        <a class="usename" id="usename" href="">Tony Stark</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="dropzone"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                  ondragleave="clearDrop(event)"
+                >
+                  &nbsp;
+                </div>
+                <!-- Ticket ends -->
+
+                <!-- Task 002 -->
+                <div
+                  class="card draggable shadow-sm"
+                  id="task0002"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                >
+                  <div class="card-body p-2">
+                    <div class="card-title">
+                      <span class="lead text-primary">Ticket</span>
+                    </div>
+                    <div class="mb-3 bg-light">
+                      <div
+                        id="condition"
+                        class="card-body p-3 condition"
+                      >
+                        <div class="float-right mr-n2"></div>
+                        <h5 id="head">Mr.Browns backery Order Page</h5>
+                        <div class="grid">
+                          <div class="right-bor">
+                            <h6>Date of Issue</h6>
+                            <!-- Get current date -->
+                            <h7 id="date2">2022-05-24</h7>
+                          </div>
+                          <div>
+                            <h6>Bug Encounter</h6>
+                            <h7 id="date2">2021-06-21</h7>
+                          </div>
+                        </div>
+
+                        <h6>Description</h6>
+                        <p class="des" id="des">
+                          Button size is very small 
+                      
+                        </p>
+                        <div class="grid">
+                          <h6>Severity :</h6>
+                          <h6 class="num-color" id="sev">Low</h6>
+                        </div>
+                        <hr />
+                        <div class="float-right mt-n1">
+                          <img
+                            draggable="false"
+                            src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                            width="32"
+                            height="32"
+                            class="rounded-circle"
+                            alt="Avatar"
+                          />
+                        </div>
+                        <a class="usename" id="usename" href="">Mila Kunis</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="dropzone"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                  ondragleave="clearDrop(event)"
+                >
+                  &nbsp;
+                </div>
+                <!-- end of Tickets -->
+
+                <!-- Task 003 -->
+                <div
+                  class="card draggable shadow-sm"
+                  id="task0003"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                >
+                  <div class="card-body p-2">
+                    <div class="card-title">
+                      <span class="lead text-primary">Ticket</span>
+                    </div>
+                    <div class="mb-3 bg-light">
+                      <div
+                        id="condition"
+                        class="card-body p-3 condition-high"
+                      >
+                        <div class="float-right mr-n2"></div>
+                        <h5 id="head">Clash of Groups</h5>
+                        <div class="grid">
+                          <div class="right-bor">
+                            <h6>Date of Issue</h6>
+                            <!-- Get current date -->
+                            <h7 id="date2">2022-04-11</h7>
+                          </div>
+                          <div>
+                            <h6>Bug Encounter</h6>
+                            <h7 id="date2">2022-04-12</h7>
+                          </div>
+                        </div>
+
+                        <h6>Description</h6>
+                        <p class="des" id="des">
+                           When buying gems the game refuses to log in.
+                        </p>
+                        <div class="grid">
+                          <h6>Severity :</h6>
+                          <h6 class="num-color-high" id="sev">Critical</h6>
+                        </div>
+                        <hr />
+                        <div class="float-right mt-n1">
+                          <img
+                            draggable="false"
+                            src="https://bootdey.com/img/Content/avatar/avatar4.png"
+                            width="32"
+                            height="32"
+                            class="rounded-circle"
+                            alt="Avatar"
+                          />
+                        </div>
+                        <a class="usename" id="usename" href="">Richard Goosen</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="dropzone"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                  ondragleave="clearDrop(event)"
+                >
+                  &nbsp;
+                </div>
+                <!-- end of Tickets -->
+
+                <!-- Task 004 -->
+                <div
+                  class="card draggable shadow-sm"
+                  id="task0004"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                >
+                  <div class="card-body p-2">
+                    <div class="card-title">
+                      <span class="lead text-primary">Ticket</span>
+                    </div>
+                    <div class="mb-3 bg-light">
+                      <div
+                        id="condition"
+                        class="card-body p-3 condition-medium"
+                      >
+                        <div class="float-right mr-n2"></div>
+                        <h5 id="head">Ndlovu Game Lodge</h5>
+                        <div class="grid">
+                          <div class="right-bor">
+                            <h6>Date of Issue</h6>
+                            <!-- Get current date -->
+                            <h7 id="date2">2019-05-01</h7>
+                          </div>
+                          <div>
+                            <h6>Bug Encounter</h6>
+                            <h7 id="date2">2019-04-30</h7>
+                          </div>
+                        </div>
+
+                        <h6>Description</h6>
+                        <p class="des" id="des">
+                          Security risks on the user credential side.
+                        </p>
+                        <div class="grid">
+                          <h6>Severity :</h6>
+                          <h6 class="num-color-medium" id="sev">Medium</h6>
+                        </div>
+                        <hr />
+                        <div class="float-right mt-n1">
+                          <img
+                            draggable="false"
+                            src="https://bootdey.com/img/Content/avatar/avatar4.png"
+                            width="32"
+                            height="32"
+                            class="rounded-circle"
+                            alt="Avatar"
+                          />
+                        </div>
+                        <a class="usename" id="usename" href="">Piet Pompies</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="dropzone"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                  ondragleave="clearDrop(event)"
+                >
+                  &nbsp;
+                </div>
+                <!-- end of Tickets -->
+
+                
+                
+              </div>
+            </div>
+          </div>
+          <!-- End of TO-Do -->
+          <div class="col-12 col-lg-6 col-xl-3">
+            <div class="card card-border-warning">
+              <div class="card-header">
+                <div class="card-actions float-right">
+                  <div class="dropdown show">
+                    <a href="#" data-toggle="dropdown" data-display="static">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-more-horizontal align-middle"
+                      >
+                        <circle cx="12" cy="12" r="1"></circle>
+                        <circle cx="19" cy="12" r="1"></circle>
+                        <circle cx="5" cy="12" r="1"></circle>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <!-- Start of In Progress -->
+                <h5 class="card-title">In Progress</h5>
+                <h6 class="card-subtitle text-muted">
+                  This shows tasks currently in Progress.
+                </h6>
+              </div>
+              <div class="card-body card items" id="Progress">
+                <div
+                  class="dropzone"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                  ondragleave="clearDrop(event)"
+                >
+                  &nbsp;
+                </div>
+                <!-- This is where the inprogress things need to be-->
+                <!-- Task 006 -->
+                <div
+                  class="card draggable shadow-sm"
+                  id="task0006"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                >
+                  <div class="card-body p-2">
+                    <div class="card-title">
+                      <span class="lead text-primary">Ticket</span>
+                    </div>
+                    <div class="mb-3 bg-light">
+                      <div
+                        id="condition"
+                        class="card-body p-3 condition-medium"
+                      >
+                        <div class="float-right mr-n2"></div>
+                        <h5 id="head">FoodData Diet App</h5>
+                        <div class="grid">
+                          <div class="right-bor">
+                            <h6>Date of Issue</h6>
+                            <!-- Get current date -->
+                            <h7 id="date2">2021-05-04</h7>
+                          </div>
+                          <div>
+                            <h6>Bug Encounter</h6>
+                            <h7 id="date2">2021-05-03</h7>
+                          </div>
+                        </div>
+
+                        <h6>Description</h6>
+                        <p class="des" id="des">
+                          I get Hungry waiting for the app to boot up..beats its
+                          purpose..
+                        </p>
+                        <div class="grid">
+                          <h6>Severity :</h6>
+                          <h6 class="num-color-medium" id="sev">6</h6>
+                        </div>
+                        <hr />
+                        <div class="float-right mt-n1">
+                          <img
+                            draggable="false"
+                            src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                            width="32"
+                            height="32"
+                            class="rounded-circle"
+                            alt="Avatar"
+                          />
+                        </div>
+                        <a class="usename" id="usename" href="">Mike Tango</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="dropzone"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                  ondragleave="clearDrop(event)"
+                >
+                  &nbsp;
+                </div>
+                <!-- end of Tickets -->
+                 <!-- Task 007 -->
+                 <div
+                 class="card draggable shadow-sm"
+                 id="task0007"
+                 draggable="true"
+                 ondragstart="drag(event)"
+               >
+                 <div class="card-body p-2">
+                   <div class="card-title">
+                     <span class="lead text-primary">Ticket</span>
+                   </div>
+                   <div class="mb-3 bg-light">
+                     <div
+                       id="condition"
+                       class="card-body p-3 condition-medium"
+                     >
+                       <div class="float-right mr-n2"></div>
+                       <h5 id="head">Ndlovu Game Lodge</h5>
+                       <div class="grid">
+                         <div class="right-bor">
+                           <h6>Date of Issue</h6>
+                           <!-- Get current date -->
+                           <h7 id="date2">2019-05-01</h7>
+                         </div>
+                         <div>
+                           <h6>Bug Encounter</h6>
+                           <h7 id="date2">2019-04-30</h7>
+                         </div>
+                       </div>
+
+                       <h6>Description</h6>
+                       <p class="des" id="des">
+                         Security risks on the user credential side.
+                       </p>
+                       <div class="grid">
+                         <h6>Severity :</h6>
+                         <h6 class="num-color-medium" id="sev">Medium</h6>
+                       </div>
+                       <hr />
+                       <div class="float-right mt-n1">
+                         <img
+                           draggable="false"
+                           src="https://bootdey.com/img/Content/avatar/avatar4.png"
+                           width="32"
+                           height="32"
+                           class="rounded-circle"
+                           alt="Avatar"
+                         />
+                       </div>
+                       <a class="usename" id="usename" href="">Piet Pompies</a>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               <div
+                 class="dropzone"
+                 ondrop="drop(event)"
+                 ondragover="allowDrop(event)"
+                 ondragleave="clearDrop(event)"
+               >
+                 &nbsp;
+               </div>
+               <!-- end of Tickets -->
+                <!-- Task 008 -->
+                <div
+                  class="card draggable shadow-sm"
+                  id="task0008"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                >
+                  <div class="card-body p-2">
+                    <div class="card-title">
+                      <span class="lead text-primary">Ticket</span>
+                    </div>
+                    <div class="mb-3 bg-light">
+                      <div
+                        id="condition"
+                        class="card-body p-3 condition"
+                      >
+                        <div class="float-right mr-n2"></div>
+                        <h5 id="head">Ndlovu Game Lodge</h5>
+                        <div class="grid">
+                          <div class="right-bor">
+                            <h6>Date of Issue</h6>
+                            <!-- Get current date -->
+                            <h7 id="date2">2021-02-01</h7>
+                          </div>
+                          <div>
+                            <h6>Bug Encounter</h6>
+                            <h7 id="date2">2021-01-30</h7>
+                          </div>
+                        </div>
+
+                        <h6>Description</h6>
+                        <p class="des" id="des">
+                          Inefficient Layout affecting usabillity
+                        </p>
+                        <div class="grid">
+                          <h6>Severity :</h6>
+                          <h6 class="num-color" id="sev">Low</h6>
+                        </div>
+                        <hr />
+                        <div class="float-right mt-n1">
+                          <img
+                            draggable="false"
+                            src="https://bootdey.com/img/Content/avatar/avatar4.png"
+                            width="32"
+                            height="32"
+                            class="rounded-circle"
+                            alt="Avatar"
+                          />
+                        </div>
+                        <a class="usename" id="usename" href="">Piet Pompies</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="dropzone"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                  ondragleave="clearDrop(event)"
+                >
+                  &nbsp;
+                </div>
+                <!-- end of Tickets -->
+                 <!-- Task 009 -->
+                 <div
+                 class="card draggable shadow-sm"
+                 id="task0009"
+                 draggable="true"
+                 ondragstart="drag(event)"
+               >
+                 <div class="card-body p-2">
+                   <div class="card-title">
+                     <span class="lead text-primary">Ticket</span>
+                   </div>
+                   <div class="mb-3 bg-light">
+                     <div
+                       id="condition"
+                       class="card-body p-3 condition"
+                     >
+                       <div class="float-right mr-n2"></div>
+                       <h5 id="head">Clash Of Groups Mobile</h5>
+                       <div class="grid">
+                         <div class="right-bor">
+                           <h6>Date of Issue</h6>
+                           <!-- Get current date -->
+                           <h7 id="date2">2019-05-14</h7>
+                         </div>
+                         <div>
+                           <h6>Bug Encounter</h6>
+                           <h7 id="date2">2019-04-30</h7>
+                         </div>
+                       </div>
+
+                       <h6>Description</h6>
+                       <p class="des" id="des">
+                         Animations seems glitch on screen..new phone
+                       </p>
+                       <div class="grid">
+                         <h6>Severity :</h6>
+                         <h6 class="num-color" id="sev">Low</h6>
+                       </div>
+                       <hr />
+                       <div class="float-right mt-n1">
+                         <img
+                           draggable="false"
+                           src="https://bootdey.com/img/Content/avatar/avatar4.png"
+                           width="32"
+                           height="32"
+                           class="rounded-circle"
+                           alt="Avatar"
+                         />
+                       </div>
+                       <a class="usename" id="usename" href="">Abe Gillian</a>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               <div
+                 class="dropzone"
+                 ondrop="drop(event)"
+                 ondragover="allowDrop(event)"
+                 ondragleave="clearDrop(event)"
+               >
+                 &nbsp;
+               </div>
+               <!-- end of Tickets -->
+                <!-- Task 010 -->
+                <div
+                  class="card draggable shadow-sm"
+                  id="task0010"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                >
+                  <div class="card-body p-2">
+                    <div class="card-title">
+                      <span class="lead text-primary">Ticket</span>
+                    </div>
+                    <div class="mb-3 bg-light">
+                      <div
+                        id="condition"
+                        class="card-body p-3 condition-medium"
+                      >
+                        <div class="float-right mr-n2"></div>
+                        <h5 id="head">Mr.Browns bakery order Page</h5>
+                        <div class="grid">
+                          <div class="right-bor">
+                            <h6>Date of Issue</h6>
+                            <!-- Get current date -->
+                            <h7 id="date2">2019-05-01</h7>
+                          </div>
+                          <div>
+                            <h6>Bug Encounter</h6>
+                            <h7 id="date2">2019-04-30</h7>
+                          </div>
+                        </div>
+
+                        <h6>Description</h6>
+                        <p class="des" id="des">
+                          Checkout button non-responsive
+                        </p>
+                        <div class="grid">
+                          <h6>Severity :</h6>
+                          <h6 class="num-color-medium" id="sev">Medium</h6>
+                        </div>
+                        <hr />
+                        <div class="float-right mt-n1">
+                          <img
+                            draggable="false"
+                            src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                            width="32"
+                            height="32"
+                            class="rounded-circle"
+                            alt="Avatar"
+                          />
+                        </div>
+                        <a class="usename" id="usename" href="">Emma Stone</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="dropzone"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                  ondragleave="clearDrop(event)"
+                >
+                  &nbsp;
+                </div>
+                <!-- end of Tickets -->
+              </div>
+            </div>
+          </div>
+          <!-- end of in - progress -->
+          <div class="col-12 col-lg-6 col-xl-3">
+            <div class="card card-border-danger">
+              <div class="card-header">
+                <div class="card-actions float-right">
+                  <div class="dropdown show">
+                    <a href="#" data-toggle="dropdown" data-display="static">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-more-horizontal align-middle"
+                      >
+                        <circle cx="12" cy="12" r="1"></circle>
+                        <circle cx="19" cy="12" r="1"></circle>
+                        <circle cx="5" cy="12" r="1"></circle>
+                      </svg>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <h5 class="card-title">Review</h5>
+                <h6 class="card-subtitle text-muted">
+                  This shows the reports that are currently under review.
+                </h6>
+              </div>
+              <div class="card-body card items" id="Review">
+                <div
+                  class="dropzone"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                  ondragleave="clearDrop(event)"
+                >
+                  &nbsp;
+                </div>
+                <!--This is for the review colomn-->
+                <!-- Task 011 -->
+                <div
+                  class="card draggable shadow-sm"
+                  id="task0011"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                >
+                  <div class="card-body p-2">
+                    <div class="card-title">
+                      <span class="lead text-primary">Ticket</span>
+                    </div>
+                    <div class="mb-3 bg-light">
+                      <div id="condition" class="card-body p-3 condition">
+                        <div class="float-right mr-n2"></div>
+                        <h5 id="head">Mr.Browns Bakery</h5>
+                        <div class="grid">
+                          <div class="right-bor">
+                            <h6>Date of Issue</h6>
+                            <!-- Get current date -->
+                            <h7 id="date2">2022-05-25</h7>
+                          </div>
+                          <div>
+                            <h6>Bug Encounter</h6>
+                            <h7 id="date2">2022-05-23</h7>
+                          </div>
+                        </div>
+
+                        <h6>Description</h6>
+                        <p class="des" id="des">
+                          When ordering a straweberry milkshake,i get
+                          Choclate..plz fix
+                        </p>
+                        <div class="grid">
+                          <h6>Severity :</h6>
+                          <h6 class="num-color" id="sev">3</h6>
+                        </div>
+                        <hr />
+                        <div class="float-right mt-n1">
+                          <img
+                            draggable="false"
+                            src="https://bootdey.com/img/Content/avatar/avatar8.png"
+                            width="32"
+                            height="32"
+                            class="rounded-circle"
+                            alt="Avatar"
+                          />
+                        </div>
+                        <a class="usename" id="usename" href=""
+                          >Charlize Theron</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="dropzone"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                  ondragleave="clearDrop(event)"
+                >
+                  &nbsp;
+                </div>
+                <!-- end of Tickets -->
+                  <!-- Task 012 -->
+                  <div
+                  class="card draggable shadow-sm"
+                  id="task0012"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                >
+                  <div class="card-body p-2">
+                    <div class="card-title">
+                      <span class="lead text-primary">Ticket</span>
+                    </div>
+                    <div class="mb-3 bg-light">
+                      <div id="condition" class="card-body p-3 condition">
+                        <div class="float-right mr-n2"></div>
+                        <h5 id="head">FoodData Diet Tracker App</h5>
+                        <div class="grid">
+                          <div class="right-bor">
+                            <h6>Date of Issue</h6>
+                            <!-- Get current date -->
+                            <h7 id="date2">2012-04-25</h7>
+                          </div>
+                          <div>
+                            <h6>Bug Encounter</h6>
+                            <h7 id="date2">2012-03-23</h7>
+                          </div>
+                        </div>
+
+                        <h6>Description</h6>
+                        <p class="des" id="des">
+                          Tracking of total calories burnt not showing.
+                        </p>
+                        <div class="grid">
+                          <h6>Severity :</h6>
+                          <h6 class="num-color" id="sev">Low</h6>
+                        </div>
+                        <hr />
+                        <div class="float-right mt-n1">
+                          <img
+                            draggable="false"
+                            src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                            width="32"
+                            height="32"
+                            class="rounded-circle"
+                            alt="Avatar"
+                          />
+                        </div>
+                        <a class="usename" id="usename" href=""
+                          >Mila Kunis</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="dropzone"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                  ondragleave="clearDrop(event)"
+                >
+                  &nbsp;
+                </div>
+                <!-- end of Tickets -->
+                  <!-- Task 013 -->
+                  <div
+                  class="card draggable shadow-sm"
+                  id="task0013"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                >
+                  <div class="card-body p-2">
+                    <div class="card-title">
+                      <span class="lead text-primary">Ticket</span>
+                    </div>
+                    <div class="mb-3 bg-light">
+                      <div id="condition" class="card-body p-3 condition-medium">
+                        <div class="float-right mr-n2"></div>
+                        <h5 id="head">Mr.Browns Bakery</h5>
+                        <div class="grid">
+                          <div class="right-bor">
+                            <h6>Date of Issue</h6>
+                            <!-- Get current date -->
+                            <h7 id="date2">2012-05-25</h7>
+                          </div>
+                          <div>
+                            <h6>Bug Encounter</h6>
+                            <h7 id="date2">2012-05-23</h7>
+                          </div>
+                        </div>
+
+                        <h6>Description</h6>
+                        <p class="des" id="des">
+                          Error navigating to local storage when using MAC laptop
+                        </p>
+                        <div class="grid">
+                          <h6>Severity :</h6>
+                          <h6 class="num-color-medium" id="sev">Medium</h6>
+                        </div>
+                        <hr />
+                        <div class="float-right mt-n1">
+                          <img
+                            draggable="false"
+                            src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                            width="32"
+                            height="32"
+                            class="rounded-circle"
+                            alt="Avatar"
+                          />
+                        </div>
+                        <a class="usename" id="usename" href=""
+                          >Goerge Clooney</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="dropzone"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                  ondragleave="clearDrop(event)"
+                >
+                  &nbsp;
+                </div>
+                <!-- end of Tickets -->
+                  <!-- Task 014 -->
+                  <div
+                  class="card draggable shadow-sm"
+                  id="task0014"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                >
+                  <div class="card-body p-2">
+                    <div class="card-title">
+                      <span class="lead text-primary">Ticket</span>
+                    </div>
+                    <div class="mb-3 bg-light">
+                      <div id="condition" class="card-body p-3 condition-high">
+                        <div class="float-right mr-n2"></div>
+                        <h5 id="head">Ndlovu Game Lodge</h5>
+                        <div class="grid">
+                          <div class="right-bor">
+                            <h6>Date of Issue</h6>
+                            <!-- Get current date -->
+                            <h7 id="date2">2020-02-22</h7>
+                          </div>
+                          <div>
+                            <h6>Bug Encounter</h6>
+                            <h7 id="date2">2020-01-23</h7>
+                          </div>
+                        </div>
+
+                        <h6>Description</h6>
+                        <p class="des" id="des">
+                          Compatibillity Problems with app on IOS
+                        </p>
+                        <div class="grid">
+                          <h6>Severity :</h6>
+                          <h6 class="num-color-high" id="sev">High</h6>
+                        </div>
+                        <hr />
+                        <div class="float-right mt-n1">
+                          <img
+                            draggable="false"
+                            src="https://bootdey.com/img/Content/avatar/avatar8.png"
+                            width="32"
+                            height="32"
+                            class="rounded-circle"
+                            alt="Avatar"
+                          />
+                        </div>
+                        <a class="usename" id="usename" href=""
+                          >Emma Watson</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="dropzone"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                  ondragleave="clearDrop(event)"
+                >
+                  &nbsp;
+                </div>
+                <!-- end of Tickets -->
+                  <!-- Task 015 -->
+                  <div
+                  class="card draggable shadow-sm"
+                  id="task0015"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                >
+                  <div class="card-body p-2">
+                    <div class="card-title">
+                      <span class="lead text-primary">Ticket</span>
+                    </div>
+                    <div class="mb-3 bg-light">
+                      <div id="condition" class="card-body p-3 condition-high">
+                        <div class="float-right mr-n2"></div>
+                        <h5 id="head">Clash of Groups</h5>
+                        <div class="grid">
+                          <div class="right-bor">
+                            <h6>Date of Issue</h6>
+                            <!-- Get current date -->
+                            <h7 id="date2">2021-05-23</h7>
+                          </div>
+                          <div>
+                            <h6>Bug Encounter</h6>
+                            <h7 id="date2">2021-05-21</h7>
+                          </div>
+                        </div>
+
+                        <h6>Description</h6>
+                        <p class="des" id="des">
+                          Game Freezes on Launch
+                          
+                        </p>
+                        <div class="grid">
+                          <h6>Severity :</h6>
+                          <h6 class="num-color-high" id="sev">Critical</h6>
+                        </div>
+                        <hr />
+                        <div class="float-right mt-n1">
+                          <img
+                            draggable="false"
+                            src="https://bootdey.com/img/Content/avatar/avatar5.png"
+                            width="32"
+                            height="32"
+                            class="rounded-circle"
+                            alt="Avatar"
+                          />
+                        </div>
+                        <a class="usename" id="usename" href=""
+                          >Mike Tango</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="dropzone"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                  ondragleave="clearDrop(event)"
+                >
+                  &nbsp;
+                </div>
+                <!-- end of Tickets -->
+              </div>
+            </div>
+          </div>
+          <!-- End of review  -->
+          <div class="col-12 col-lg-6 col-xl-3">
+            <div class="card card-border-success">
+              <div class="card-header">
+                <div class="card-actions float-right">
+                  <div class="dropdown show">
+                    <a href="#" data-toggle="dropdown" data-display="static">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-more-horizontal align-middle"
+                      >
+                        <circle cx="12" cy="12" r="1"></circle>
+                        <circle cx="19" cy="12" r="1"></circle>
+                        <circle cx="5" cy="12" r="1"></circle>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <h5 class="card-title">Completed</h5>
+                <h6 class="card-subtitle text-muted">
+                  This shows all of the satisfied or completed tasks.
+                </h6>
+              </div>
+              <div class="card-body card items" id="Complete">
+                <div
+                  class="dropzone"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                  ondragleave="clearDrop(event)"
+                >
+                  &nbsp;
+                </div>
+                <!--Completed bugs-->
+                <!-- Task 0016 -->
+                <div
+                  class="card draggable shadow-sm"
+                  id="task0016"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                >
+                  <div class="card-body p-2">
+                    <div class="card-title">
+                      <span class="lead text-primary">Ticket</span>
+                    </div>
+                    <div class="mb-3 bg-light">
+                      <div id="condition" class="card-body p-3 condition-high">
+                        <div class="float-right mr-n2"></div>
+                        <h5 id="head">Ndlovu Game Lodge</h5>
+                        <div class="grid">
+                          <div class="right-bor">
+                            <h6>Date of Issue</h6>
+                            <!-- Get current date -->
+                            <h7 id="date2">2021-05-05</h7>
+                          </div>
+                          <div>
+                            <h6>Bug Encounter</h6>
+                            <h7 id="date2">2021-05-24</h7>
+                          </div>
+                        </div>
+
+                        <h6>Description</h6>
+                        <p class="des" id="des">
+                          Validation on user age keeps crashing
+                        </p>
+                        <div class="grid">
+                          <h6>Severity :</h6>
+                          <h6 class="num-color-high" id="sev">8</h6>
+                        </div>
+                        <hr />
+                        <div class="float-right mt-n1">
+                          <img
+                            draggable="false"
+                            src="https://bootdey.com/img/Content/avatar/avatar2.png"
+                            width="32"
+                            height="32"
+                            class="rounded-circle"
+                            alt="Avatar"
+                          />
+                        </div>
+                        <a class="usename" id="usename" href="">Piet Pompies</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="dropzone"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                  ondragleave="clearDrop(event)"
+                >
+                  &nbsp;
+                </div>
+                <!-- end of Ticket -->
+                 <!-- Task 0017 -->
+                 <div
+                 class="card draggable shadow-sm"
+                 id="task0017"
+                 draggable="true"
+                 ondragstart="drag(event)"
+               >
+                 <div class="card-body p-2">
+                   <div class="card-title">
+                     <span class="lead text-primary">Ticket</span>
+                   </div>
+                   <div class="mb-3 bg-light">
+                     <div id="condition" class="card-body p-3 condition-intermediate">
+                       <div class="float-right mr-n2"></div>
+                       <h5 id="head">Mr.Brown Bakery Order</h5>
+                       <div class="grid">
+                         <div class="right-bor">
+                           <h6>Date of Issue</h6>
+                           <!-- Get current date -->
+                           <h7 id="date2">2021-06-05</h7>
+                         </div>
+                         <div>
+                           <h6>Bug Encounter</h6>
+                           <h7 id="date2">2021-05-24</h7>
+                         </div>
+                       </div>
+
+                       <h6>Description</h6>
+                       <p class="des" id="des">
+                         No validation on quantity
+                       </p>
+                       <div class="grid">
+                         <h6>Severity :</h6>
+                         <h6 class="num-color-intermediate" id="sev">Intermediate</h6>
+                       </div>
+                       <hr />
+                       <div class="float-right mt-n1">
+                         <img
+                           draggable="false"
+                           src="https://bootdey.com/img/Content/avatar/avatar7.png"
+                           width="32"
+                           height="32"
+                           class="rounded-circle"
+                           alt="Avatar"
+                         />
+                       </div>
+                       <a class="usename" id="usename" href="">Robert Downey Jr.</a>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               <div
+                 class="dropzone"
+                 ondrop="drop(event)"
+                 ondragover="allowDrop(event)"
+                 ondragleave="clearDrop(event)"
+               >
+                 &nbsp;
+               </div>
+               <!-- end of Ticket -->
+                <!-- Task 0018 -->
+                <div
+                  class="card draggable shadow-sm"
+                  id="task0018"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                >
+                  <div class="card-body p-2">
+                    <div class="card-title">
+                      <span class="lead text-primary">Ticket</span>
+                    </div>
+                    <div class="mb-3 bg-light">
+                      <div id="condition" class="card-body p-3 condition">
+                        <div class="float-right mr-n2"></div>
+                        <h5 id="head">Ndlovu Game Lodge</h5>
+                        <div class="grid">
+                          <div class="right-bor">
+                            <h6>Date of Issue</h6>
+                            <!-- Get current date -->
+                            <h7 id="date2">2020-05-05</h7>
+                          </div>
+                          <div>
+                            <h6>Bug Encounter</h6>
+                            <h7 id="date2">2020-05-24</h7>
+                          </div>
+                        </div>
+
+                        <h6>Description</h6>
+                        <p class="des" id="des">
+                          Links to contact details are non-responsive
+                        </p>
+                        <div class="grid">
+                          <h6>Severity :</h6>
+                          <h6 class="num-color" id="sev">Low</h6>
+                        </div>
+                        <hr />
+                        <div class="float-right mt-n1">
+                          <img
+                            draggable="false"
+                            src="https://bootdey.com/img/Content/avatar/avatar6.png"
+                            width="32"
+                            height="32"
+                            class="rounded-circle"
+                            alt="Avatar"
+                          />
+                        </div>
+                        <a class="usename" id="usename" href="">Ryan Gossling</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="dropzone"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                  ondragleave="clearDrop(event)"
+                >
+                  &nbsp;
+                </div>
+                <!-- end of Ticket -->
+                 <!-- Task 0019 -->
+                 <div
+                 class="card draggable shadow-sm"
+                 id="task0019"
+                 draggable="true"
+                 ondragstart="drag(event)"
+               >
+                 <div class="card-body p-2">
+                   <div class="card-title">
+                     <span class="lead text-primary">Ticket</span>
+                   </div>
+                   <div class="mb-3 bg-light">
+                     <div id="condition" class="card-body p-3 condition">
+                       <div class="float-right mr-n2"></div>
+                       <h5 id="head">Clash of Groups</h5>
+                       <div class="grid">
+                         <div class="right-bor">
+                           <h6>Date of Issue</h6>
+                           <!-- Get current date -->
+                           <h7 id="date2">2021-05-05</h7>
+                         </div>
+                         <div>
+                           <h6>Bug Encounter</h6>
+                           <h7 id="date2">2021-05-24</h7>
+                         </div>
+                       </div>
+
+                       <h6>Description</h6>
+                       <p class="des" id="des">
+                         Wrong audio for warrior
+                       </p>
+                       <div class="grid">
+                         <h6>Severity :</h6>
+                         <h6 class="num-color" id="sev">Low</h6>
+                       </div>
+                       <hr />
+                       <div class="float-right mt-n1">
+                         <img
+                           draggable="false"
+                           src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                           width="32"
+                           height="32"
+                           class="rounded-circle"
+                           alt="Avatar"
+                         />
+                       </div>
+                       <a class="usename" id="usename" href="">Abe Gillian</a>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               <div
+                 class="dropzone"
+                 ondrop="drop(event)"
+                 ondragover="allowDrop(event)"
+                 ondragleave="clearDrop(event)"
+               >
+                 &nbsp;
+               </div>
+               <!-- end of Ticket -->
+                <!-- Task 0020 -->
+                <div
+                  class="card draggable shadow-sm"
+                  id="task0020"
+                  draggable="true"
+                  ondragstart="drag(event)"
+                >
+                  <div class="card-body p-2">
+                    <div class="card-title">
+                      <span class="lead text-primary">Ticket</span>
+                    </div>
+                    <div class="mb-3 bg-light">
+                      <div id="condition" class="card-body p-3 condition-high">
+                        <div class="float-right mr-n2"></div>
+                        <h5 id="head">Ndlovu Game Lodge App</h5>
+                        <div class="grid">
+                          <div class="right-bor">
+                            <h6>Date of Issue</h6>
+                            <!-- Get current date -->
+                            <h7 id="date2">2021-05-05</h7>
+                          </div>
+                          <div>
+                            <h6>Bug Encounter</h6>
+                            <h7 id="date2">2021-05-21</h7>
+                          </div>
+                        </div>
+
+                        <h6>Description</h6>
+                        <p class="des" id="des">
+                          Login button is non-responsive
+                        </p>
+                        <div class="grid">
+                          <h6>Severity :</h6>
+                          <h6 class="num-color-high" id="sev">High</h6>
+                        </div>
+                        <hr />
+                        <div class="float-right mt-n1">
+                          <img
+                            draggable="false"
+                            src="https://bootdey.com/img/Content/avatar/avatar2.png"
+                            width="32"
+                            height="32"
+                            class="rounded-circle"
+                            alt="Avatar"
+                          />
+                        </div>
+                        <a class="usename" id="usename" href="">Micheal Scott</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="dropzone"
+                  ondrop="drop(event)"
+                  ondragover="allowDrop(event)"
+                  ondragleave="clearDrop(event)"
+                >
+                  &nbsp;
+                </div>
+                <!-- end of Ticket -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of bugs poster bord -->
+        <a href="/Landing Page WPR281/INSKT_Landing_page.html">
+          <button type="button" class="btn btn-primary" id="back">Back</button>
+        </a>
+      </div>
+    </main>
+
+    <style type="text/css">
+      body {
+        margin-top: 20px;
+        background-image: url(https://wallpapercave.com/wp/wp6358713.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      #top {
+        color: #2979ff;
+        margin-left: 40%;
+        margin-right: 30%;
+        padding-top: 1.5%;
+      }
+      .pad-3
+      {
+        padding: 1em;
+      }
+      .top {
+        background-color: rgba(255, 255, 255, 0.712);
+        border: 1px solid;
+        border-radius: 2%;
+        margin-bottom: 2%;
+        width: 100%;
+      }
+      .card.draggable {
+        cursor: grab;
+      }
+      .droppable {
+        background-color: var(--white);
+        min-height: 120px;
+      }
+
+      .card {
+        /* margin-bottom: 1.5rem; */
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.025);
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+      }
+
+      .card-border-primary {
+        border-top: 4px solid #2979ff;
+      }
+
+      .card-border-secondary {
+        border-top: 4px solid #efefef;
+      }
+
+      .card-border-success {
+        border-top: 4px solid #00c853;
+      }
+
+      .card-border-info {
+        border-top: 4px solid #3d5afe;
+      }
+
+      .card-border-warning {
+        border-top: 4px solid #ff9100;
+      }
+
+      .card-border-danger {
+        border-top: 4px solid #ff1744;
+      }
+
+      .card-border-light {
+        border-top: 4px solid #f8f9fa;
+      }
+
+      .card-border-dark {
+        border-top: 4px solid #6c757d;
+      }
+
+      .card-header {
+        border-bottom-width: 1px;
+      }
+
+      .card-actions a {
+        color: #495057;
+        text-decoration: none;
+      }
+
+      .card-actions svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .card-actions .dropdown {
+        line-height: 1.4;
+      }
+
+      .card-title {
+        font-weight: 500;
+        margin-top: 0.1rem;
+      }
+
+      .card-subtitle {
+        font-weight: 400;
+      }
+
+      .card-table {
+        margin-bottom: 0;
+      }
+
+      .card-table tr td:first-child,
+      .card-table tr th:first-child {
+        padding-left: 1.25rem;
+      }
+
+      .card-table tr td:last-child,
+      .card-table tr th:last-child {
+        padding-right: 1.25rem;
+      }
+
+      .card-img-top {
+        height: 100%;
+      }
+      /* .card {
+        margin-bottom: 1.5rem;
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.025);
+      } */
+
+      .card {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid #e5e9f2;
+        border-radius: 0.2rem;
+      }
+
+      .card-header:first-child {
+        border-radius: calc(0.2rem - 1px) calc(0.2rem - 1px) 0 0;
+      }
+
+      .card-header {
+        border-bottom-width: 1px;
+      }
+      .card-header {
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 0;
+        color: inherit;
+        background-color: #fff;
+        border-bottom: 1px solid #e5e9f2;
+      }
+      .condition {
+        border-left: 8px solid green;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      h6 {
+        margin-bottom: 5px;
+      }
+      .top-sub {
+        text-align: center;
+      }
+      a:hover {
+        text-decoration: none;
+        color: black;
+      }
+      .num-color-intermediate {
+        color: rgb(255, 230, 0);
+      }
+      .condition-intermediate {
+        border-left: 8px solid rgb(255, 230, 0);
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      .num-color-medium {
+        color: orange;
+      }
+      .condition-medium {
+        border-left: 8px solid orange;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      .num-color-high {
+        color: red;
+      }
+      .condition-high {
+        border-left: 8px solid red;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      .usename {
+        margin-right: 2%;
+      }
+      #des {
+        background-color: #49505757;
+        padding: 0.5rem;
+        border: 1.5px rgba(0, 0, 0, 0.555) solid;
+        border-radius: 4px;
+        color: black;
+        padding: 5px;
+      }
+      .des {
+        background-color: #49505757;
+        padding: 0.5rem;
+        border: 1.5px rgba(0, 0, 0, 0.555) solid;
+        border-radius: 4px;
+        color: black;
+        padding: 5px;
+      }
+      .grid {
+        display: grid;
+
+        grid-template-columns: auto auto;
+        padding-bottom: 3%;
+        padding-top: 3%;
+      }
+      .right-bor {
+        border-right: black 1px solid;
+        margin-right: 8%;
+      }
+      .num-color {
+        color: #00c853;
+      }
+    </style>
+    <script>
+      function drag(e) {
+        e.dataTransfer.setData("text/plain", e.target.id);
+      }
+
+      const allowDrop = (e) => {
+        e.preventDefault();
+        if (e.target.classList.contains("dropzone")) {
+          e.target.classList.add("droppable");
+        }
+      };
+      const clearDrop = (e) => {
+        e.target.classList.remove("droppable");
+      };
+
+      let drop = (e) => {
+        e.preventDefault();
+        console.log(e)
+        const data = e.dataTransfer.getData("text/plain");
+        console.log(data);
+        const element = document.querySelector(`#${data}`);
+        try {
+          // remove the spacer content from dropzone
+          e.target.removeChild(e.target.firstChild);
+          // add the draggable content
+          e.target.appendChild(element);
+          // remove the dropzone parent
+          e.target.replaceWith(...e.target.childNodes);
+        } catch (error) {
+          console.warn("can't move the item to the same place");
+        }
+        updateDropzones();
+      };
+      const updateDropzones = () => {
+        var dropzone =
+          '<div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="clearDrop(event)"> &nbsp; </div>';
+
+        // delete old dropzones
+        var dropzones = document.querySelectorAll(".dropzone");
+        Array.prototype.forEach.call(dropzones, function (node) {
+          node.parentNode.removeChild(node);
+          console.log("delete old dropzones");
+        });
+        // insert new dropdzone after each item
+        var card_draggable = document.querySelectorAll(".card.draggable");
+        Array.prototype.forEach.call(card_draggable, function (node) {
+          node.insertAdjacentHTML("afterend", dropzone);
+          console.log("insert new dropdzone after each item");
+        });
+
+        // insert new dropzone in any empty swimlanes
+        var card_draggable_empty = document.querySelectorAll(".items");
+        Array.prototype.forEach.call(card_draggable_empty, function (node) {
+          if (node.innerHTML.trim() === "") {
+            node.innerHTML = dropzone;
+            console.log("insert new dropzone in any empty swimlanes");
+          }
+        });
+      };
+    </script>
+    <script src="/Bug-Page WPR281/bugs-p.js"></script>
+  </body>
+</html>
