@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <link
+      href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="users_styles.css" />
+  </head>
+  <body>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="main-box clearfix">
+            <div class="table-responsive">
+              <table class="table user-list">
+                <thead>
+                  <tr>
+                    <th><span>Developer</span></th>
+                    <th><span>Date Hired</span></th>
+                    <th class="text-center"><span>Status</span></th>
+                    <th><span>Email</span></th>
+                    <th>&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody">
+                  <tr>
+                    <td>
+                      <img
+                        src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                        alt=""
+                      />
+                      <a href="#" class="user-link">Mike Tango</a>
+                      <span class="user-subhead">Senior</span>
+                    </td>
+                    <td>2013/08/08</td>
+                    <td class="text-center">
+                      <span class="label label-default">Inactive</span>
+                    </td>
+                    <td>
+                      <a href="#">mike@tango.com</a>
+                    </td>
+                    <td style="width: 20%">
+                      <a
+                        href="#"
+                        class="table-link"
+                        id="id1"
+                        data-toggle="popover"
+                        data-trigger="focus"
+                        onfocus="callInfo()"
+                      >
+                        <span class="fa-stack">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i
+                            class="fa fa-search-plus fa-stack-1x fa-inverse"
+                          ></i>
+                        </span>
+                      </a>
+
+                      <a
+                        href="#"
+                        class="table-link danger"
+                        onclick="dismiss(this)"
+                      >
+                        <span class="fa-stack">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img
+                        src="https://bootdey.com/img/Content/avatar/avatar2.png"
+                        alt=""
+                      />
+                      <a href="#" class="user-link">Piet Pompies</a>
+                      <span class="user-subhead">Intermediate</span>
+                    </td>
+                    <td>2013/08/12</td>
+                    <td class="text-center">
+                      <span class="label label-success">Active</span>
+                    </td>
+                    <td>
+                      <a href="#">piet@pompies.com</a>
+                    </td>
+                    <td style="width: 20%">
+                      <a
+                        href="#"
+                        class="table-link"
+                        id="id2"
+                        data-toggle="popover"
+                        data-trigger="focus"
+                        onfocus="callInfo()"
+                      >
+                        <span class="fa-stack">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i
+                            class="fa fa-search-plus fa-stack-1x fa-inverse"
+                          ></i>
+                        </span>
+                      </a>
+
+                      <a
+                        href="#"
+                        class="table-link danger"
+                        onclick="dismiss(this)"
+                      >
+                        <span class="fa-stack">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img
+                        src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                        alt=""
+                      />
+                      <a href="#" class="user-link">Abe Gillian</a>
+                      <span class="user-subhead">Junior</span>
+                    </td>
+                    <td>2013/03/03</td>
+                    <td class="text-center">
+                      <span class="label label-danger">On Leave</span>
+                    </td>
+                    <td>
+                      <a href="#">abe@gillian.com</a>
+                    </td>
+                    <td style="width: 20%">
+                      <a
+                        href="#"
+                        class="table-link"
+                        id="id3"
+                        data-toggle="popover"
+                        data-trigger="focus"
+                        onfocus="callInfo()"
+                      >
+                        <span class="fa-stack">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i
+                            class="fa fa-search-plus fa-stack-1x fa-inverse"
+                          ></i>
+                        </span>
+                      </a>
+
+                      <a
+                        href="#"
+                        class="table-link danger"
+                        onclick="dismiss(this)"
+                      >
+                        <span class="fa-stack">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img
+                        src="https://bootdey.com/img/Content/avatar/avatar4.png"
+                        alt=""
+                      />
+                      <a href="#" class="user-link">Emma Stone</a>
+                      <span class="user-subhead">Junior</span>
+                    </td>
+                    <td>2014/01/24</td>
+                    <td class="text-center">
+                      <span class="label label-warning">Trail</span>
+                    </td>
+                    <td>
+                      <a href="#">emma@stone.com.com</a>
+                    </td>
+                    <td style="width: 20%">
+                      <a
+                        href="#"
+                        class="table-link"
+                        id="id4"
+                        data-toggle="popover"
+                        data-trigger="focus"
+                        onfocus="callInfo()"
+                      >
+                        <span class="fa-stack">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i
+                            class="fa fa-search-plus fa-stack-1x fa-inverse"
+                          ></i>
+                        </span>
+                      </a>
+
+                      <a
+                        href="#"
+                        class="table-link danger"
+                        onclick="dismiss(this)"
+                      >
+                        <span class="fa-stack">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img
+                        src="https://bootdey.com/img/Content/avatar/avatar5.png"
+                        alt=""
+                      />
+                      <a href="#" class="user-link">Micheal Scott</a>
+                      <span class="user-subhead">Team Leader</span>
+                    </td>
+                    <td>2009/12/31</td>
+                    <td class="text-center">
+                      <span class="label label-success">Active</span>
+                    </td>
+                    <td>
+                      <a href="#">micheal@scott.com</a>
+                    </td>
+                    <td style="width: 20%">
+                      <a
+                        href="#"
+                        class="table-link"
+                        id="id5"
+                        data-toggle="popover"
+                        data-trigger="focus"
+                        onfocus="callInfo()"
+                      >
+                        <span class="fa-stack">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i
+                            class="fa fa-search-plus fa-stack-1x fa-inverse"
+                          ></i>
+                        </span>
+                      </a>
+
+                      <a
+                        href="#"
+                        class="table-link danger"
+                        onclick="dismiss(this)"
+                      >
+                        <span class="fa-stack">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img
+                        src="https://bootdey.com/img/Content/avatar/avatar6.png"
+                        alt=""
+                      />
+                      <a href="#" class="user-link">Mila Kunis</a>
+                      <span class="user-subhead">Junior</span>
+                    </td>
+                    <td>2013/08/08</td>
+                    <td class="text-center">
+                      <span class="label label-default">Inactive</span>
+                    </td>
+                    <td>
+                      <a href="#">mila@kunis.com</a>
+                    </td>
+                    <td style="width: 20%">
+                      <a
+                        href="#"
+                        class="table-link"
+                        id="id6"
+                        data-toggle="popover"
+                        data-trigger="focus"
+                        onfocus="callInfo()"
+                      >
+                        <span class="fa-stack">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i
+                            class="fa fa-search-plus fa-stack-1x fa-inverse"
+                          ></i>
+                        </span>
+                      </a>
+
+                      <a
+                        href="#"
+                        class="table-link danger"
+                        onclick="dismiss(this)"
+                      >
+                        <span class="fa-stack">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img
+                        src="https://bootdey.com/img/Content/avatar/avatar7.png"
+                        alt=""
+                      />
+                      <a href="#" class="user-link">George Clooney</a>
+                      <span class="user-subhead">Senior</span>
+                    </td>
+                    <td>2013/08/12</td>
+                    <td class="text-center">
+                      <span class="label label-success">Active</span>
+                    </td>
+                    <td>
+                      <a href="#">george@clooney.com</a>
+                    </td>
+                    <td style="width: 20%">
+                      <a
+                        href="#"
+                        class="table-link"
+                        id="id7"
+                        data-toggle="popover"
+                        data-trigger="focus"
+                        onfocus="callInfo()"
+                      >
+                        <span class="fa-stack">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i
+                            class="fa fa-search-plus fa-stack-1x fa-inverse"
+                          ></i>
+                        </span>
+                      </a>
+
+                      <a
+                        href="#"
+                        class="table-link danger"
+                        onclick="dismiss(this)"
+                      >
+                        <span class="fa-stack">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img
+                        src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                        alt=""
+                      />
+                      <a href="#" class="user-link">Ryan Gossling</a>
+                      <span class="user-subhead">Senior</span>
+                    </td>
+                    <td>2007/03/03</td>
+                    <td class="text-center">
+                      <span class="label label-danger">On Leave</span>
+                    </td>
+                    <td>
+                      <a href="#">ryan@gossling.com</a>
+                    </td>
+                    <td style="width: 20%">
+                      <a
+                        href="#"
+                        class="table-link"
+                        id="id8"
+                        data-toggle="popover"
+                        data-trigger="focus"
+                        onfocus="callInfo()"
+                      >
+                        <span class="fa-stack">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i
+                            class="fa fa-search-plus fa-stack-1x fa-inverse"
+                          ></i>
+                        </span>
+                      </a>
+
+                      <a
+                        href="#"
+                        class="table-link danger"
+                        onclick="dismiss(this)"
+                      >
+                        <span class="fa-stack">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img
+                        src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                        alt=""
+                      />
+                      <a href="#" class="user-link">Emma Watson</a>
+                      <span class="user-subhead">Junior</span>
+                    </td>
+                    <td>2014/01/24</td>
+                    <td class="text-center">
+                      <span class="label label-warning">New</span>
+                    </td>
+                    <td>
+                      <a href="#">emma@watson.com</a>
+                    </td>
+                    <td style="width: 20%">
+                      <a
+                        href="#"
+                        class="table-link"
+                        id="id9"
+                        data-toggle="popover"
+                        data-trigger="focus"
+                        onfocus="callInfo()"
+                      >
+                        <span class="fa-stack">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i
+                            class="fa fa-search-plus fa-stack-1x fa-inverse"
+                          ></i>
+                        </span>
+                      </a>
+
+                      <a
+                        href="#"
+                        class="table-link danger"
+                        onclick="dismiss(this)"
+                      >
+                        <span class="fa-stack">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img
+                        src="https://bootdey.com/img/Content/avatar/avatar6.png"
+                        alt=""
+                      />
+                      <a href="#" class="user-link">Robert Downey Jr.</a>
+                      <span class="user-subhead">Senior</span>
+                    </td>
+                    <td>2003/12/31</td>
+                    <td class="text-center">
+                      <span class="label label-success">Active</span>
+                    </td>
+                    <td>
+                      <a href="#">thebest@jarvis.com</a>
+                    </td>
+                    <td style="width: 20%">
+                      <a
+                        href="#"
+                        class="table-link"
+                        id="id10"
+                        data-toggle="popover"
+                        data-trigger="focus"
+                        onfocus="callInfo()"
+                      >
+                        <span class="fa-stack">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i
+                            class="fa fa-search-plus fa-stack-1x fa-inverse"
+                          ></i>
+                        </span>
+                      </a>
+
+                      <a
+                        href="#"
+                        class="table-link danger"
+                        onclick="dismiss(this)"
+                      >
+                        <span class="fa-stack">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <a href = "/Landing Page WPR281/INSKT_Landing_page.html" >
+            <button type="button"  class="btn btn-primary" id="back"   > Back  
+            </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="Users.js"></script>
+  </body>
+</html>

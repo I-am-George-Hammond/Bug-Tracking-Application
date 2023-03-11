@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8"> -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginstyle.css"/>
+    
+   
+    <title>Login Page</title>
+</head>
+<body> 
+    <div class="wrapper">
+      <h1 class="text-center">Welcome Admin</h1>
+      
+      <form name ="Loginfrm" id="loginform" action = "#" method="post" class="validationpage">
+       <img class="imagecenter" src="image/Joker-bug-shlap.gif" alt="">
+        <div class="UsernameHold">
+           <label for="adminText" class="formlabel">Username</label>
+           <div class="adminField">
+            <input class = "input-control" type="text"  name = "adminText" id="adminText" required placeholder="Username">
+            <div id = "message" class="error-message">
+                Please enter valid admin name
+            </div>
+           </div>
+        </div>
+
+        <div class="formgroup was-validated">
+          <label for="adminPassword" class="formlabel">Password</label>
+          <div class="adminField">
+            <input class = "input-control" type="password" name = "adminPassword" id="adminPassword" required placeholder="*********">
+            <div id = "pmessage" class="error-message">
+                Please enter valid admin password
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="formgroup formcheck">
+            <input class = "formcheckbox" type="checkbox" id="choice">
+            <label for="choice" class="formchecklabel">Remember admin account </label>
+        </div> -->
+        <input type="button" id="btnLogin" class = "btn btn-approve width-alter" value="Login" onclick="validation()"/>
+      </form>
+    </div>
+    <script src = "loginvalidation.js"></script>
+</body>
+</html>
